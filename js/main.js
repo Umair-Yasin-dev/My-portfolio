@@ -168,6 +168,18 @@
       });
     });
   }
+  
+var CONFIG = {
+  roles: [
+    'Full Stack Web Developer',
+    'Native Android apps in Java',
+    'REST APIs with Node.js & MySQL',
+    'Clean, maintainable architecture',
+    'Responsive front-ends with JavaScript'
+  ],
+  contactEmail: 'umairyasin911410@gmail.com',
+  formEndpoint: ''
+};
 
   /* ---------- Magnetic buttons ---------- */
   function initMagnetic() {
