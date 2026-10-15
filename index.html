@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Umair Yasin| Software Engineer &amp; Android Developer</title>
+  <meta name="description" content="Portfolio of a Software Engineer and native Android developer building with Java, JavaScript and MySQL." />
+  <meta name="theme-color" content="#05060a" />
+  <meta property="og:title" content="Umair Yasin | Software Engineer &amp; Android Developer" />
+  <meta property="og:description" content="Native Android apps in Java, clean architecture, and data-driven software." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%2322d3ee'/%3E%3Cstop offset='1' stop-color='%23ff3fa4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%2305060a'/%3E%3Cpath d='M22 20 10 32l12 12M42 20l12 12-12 12' fill='none' stroke='url(%23g)' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <noscript><style>#preloader{display:none}body.is-loading{overflow:auto}</style></noscript>
+</head>
+
+<body class="is-loading">
+
+  <!-- Preloader -->
+  <div id="preloader" aria-hidden="true">
+    <div class="pre-inner">
+      <div class="pre-logo grad-text">&lt;/&gt;</div>
+      <div class="pre-num"><span class="pre-count">0</span>%</div>
+    </div>
+  </div>
+
+  <!-- Fixed layers: ambient light, 3D canvas, grid, scroll progress, cursor glow -->
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <canvas id="bg3d" aria-hidden="true"></canvas>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><span></span></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#home" aria-label="Back to top">
+        <span class="brand-mark">&lt;/&gt;</span>
+        <span class="brand-name">Umair Yasin</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" data-link>About</a></li>
+        <li><a href="#skills" data-link>Skills</a></li>
+        <li><a href="#projects" data-link>Projects</a></li>
+        <li><a href="#contact" data-link>Contact</a></li>
+        <li class="nav-cta"><a href="#contact">Hire me</a></li>
+      </ul>
+
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-inner">
+          <p class="eyebrow mono"><span class="dot"></span> Hello, World. I'm <strong>Umair Yasin</strong></p>
+
+          <h1 class="headline" aria-label="Software Engineer and Android Developer">
+            <span class="line"><span class="inner">Software Engineer</span></span>
+            <span class="line"><span class="inner"><span class="amp">&amp;</span> <span class="grad-text">Android Developer</span></span></span>
+          </h1>
+
+          <p class="typed-line mono" aria-live="off"><span class="prompt">&gt;</span> <span id="typed"></span><span class="caret"></span></p>
+
+          <p class="lead">
+            I design and build reliable software, from native Android apps written in Java
+            to data-driven applications backed by MySQL, with a strong eye for clean architecture.
+          </p>
+
+          <div class="cta">
+            <a class="btn btn-primary" href="#projects" data-magnetic>
+              <span>View my work</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="#contact" data-magnetic>
+              <span>Contact me</span>
+            </a>
+          </div>
+
+          <ul class="hero-chips" aria-label="Core technologies">
+            <li>Java</li><li>JavaScript</li><li>Android</li><li>MySQL</li><li>Python</li>
+          </ul>
+        </div>
+      </div>
+
+      <a class="scroll-hint" href="#about" aria-label="Scroll to About">
+        <span class="mouse"></span>
+      </a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-grid">
+
+          <div class="about-text">
+            <div class="section-head" data-reveal>
+              <p class="kicker">About me</p>
+              <h2 class="title">Engineering with strong foundations</h2>
+            </div>
+
+            <p data-reveal>
+              I'm a <strong>Software Engineer</strong> who enjoys turning ideas into well-structured,
+              dependable software. My main focus is <strong>native Android development in Java</strong>,
+              supported by solid knowledge of databases, systems and software architecture.
+            </p>
+            <p data-reveal>
+              I care about the things that make software last: understanding how computers
+              actually work, designing clear architecture, and writing code that's easy to reason about
+              and maintain.
+            </p>
+            <!-- Edit the two paragraphs above with your own story. -->
+
+            <div class="highlights" data-stagger>
+              <div class="hl glass">
+                <span class="hl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span>
+                <b>Native Android</b>
+                <span>Apps built in Java</span>
+              </div>
+              <div class="hl glass">
+                <span class="hl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 8l9 5 9-5-9-5z"/><path d="m3 13 9 5 9-5"/></svg></span>
+                <b>Software architecture</b>
+                <span>Clear, maintainable design</span>
+              </div>
+              <div class="hl glass">
+                <span class="hl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span>
+                <b>Solid fundamentals</b>
+                <span>Systems and databases</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-visual" data-reveal>
+            <div class="float-badge glass fb1">Native Android</div>
+            <div class="float-badge glass fb2">Java first</div>
+            <div class="float-badge glass fb3">MySQL</div>
+            <div class="float-badge glass fb4">Clean architecture</div>
+
+            <div class="code-card glass tilt" data-tilt="6">
+              <div class="code-bar">
+                <i></i><i></i><i></i>
+                <span>engineer.js</span>
+              </div>
+<pre class="code"><code><span class="tk-k">const</span> <span class="tk-p">engineer</span> = {
+  <span class="tk-p">role</span>: <span class="tk-s">"Software Engineer"</span>,
+  <span class="tk-p">languages</span>: [<span class="tk-s">"Java"</span>, <span class="tk-s">"JavaScript"</span>, <span class="tk-s">"Python (Basic)"</span>],
+  <span class="tk-p">database</span>: <span class="tk-s">"MySQL"</span>,
+  <span class="tk-p">mobile</span>: <span class="tk-s">"Native Android in Java"</span>,
+  <span class="tk-p">strengths</span>: [
+    <span class="tk-s">"Computer fundamentals"</span>,
+    <span class="tk-s">"System knowledge"</span>,
+    <span class="tk-s">"Software architecture"</span>,
+  ],
+  <span class="tk-p">curious</span>: <span class="tk-k">true</span>,
+};</code></pre>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="kicker">Skills</p>
+          <h2 class="title">The tools I build with</h2>
+          <p class="subtitle">Bars show how comfortable I am with each tool. Hover a card to tilt it.</p>
+        </div>
+
+        <!-- Edit data-level (0-100), --lvl, and the visible % to change a meter. -->
+        <div class="skills-grid" data-stagger>
+
+          <article class="skill-card glass glow-border tilt">
+            <div class="skill-top">
+              <div class="skill-ico" style="--ic:linear-gradient(135deg,#f97316,#ef4444);--icg:rgba(249,115,22,.6)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h11v5a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M15 10h1.5a2.5 2.5 0 0 1 0 5H15"/><path d="M7 3v3M10.5 3v3"/></svg>
+              </div>
+              <div><h3 class="skill-name">Java</h3><p class="skill-sub">Object-oriented programming</p></div>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-bar"><span class="skill-fill" data-level="90" style="--lvl:90%"></span></div>
+              <span class="skill-num">90%</span>
+            </div>
+            <ul class="chips"><li>OOP</li><li>Collections</li><li>JVM</li></ul>
+          </article>
+
+          <article class="skill-card glass glow-border tilt">
+            <div class="skill-top">
+              <div class="skill-ico" style="--ic:linear-gradient(135deg,#facc15,#f59e0b);--icg:rgba(250,204,21,.5);color:#1a1300">JS</div>
+              <div><h3 class="skill-name">JavaScript</h3><p class="skill-sub">Interactive web experiences</p></div>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-bar"><span class="skill-fill" data-level="80" style="--lvl:80%"></span></div>
+              <span class="skill-num">80%</span>
+            </div>
+            <ul class="chips"><li>ES6+</li><li>DOM</li><li>Async</li></ul>
+          </article>
+
+          <article class="skill-card glass glow-border tilt">
+            <div class="skill-top">
+              <div class="skill-ico" style="--ic:linear-gradient(135deg,#22c55e,#14b8a6);--icg:rgba(34,197,94,.55)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 18v-4a7 7 0 0 1 14 0v4z"/><path d="M8 5l1.6 2.2M16 5l-1.6 2.2"/><circle cx="9.5" cy="12" r=".7" fill="currentColor"/><circle cx="14.5" cy="12" r=".7" fill="currentColor"/></svg>
+              </div>
+              <div><h3 class="skill-name">Android (Java)</h3><p class="skill-sub">Native app development</p></div>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-bar"><span class="skill-fill" data-level="85" style="--lvl:85%"></span></div>
+              <span class="skill-num">85%</span>
+            </div>
+            <ul class="chips"><li>Activities</li><li>Intents</li><li>Material UI</li></ul>
+          </article>
+
+          <article class="skill-card glass glow-border tilt">
+            <div class="skill-top">
+              <div class="skill-ico" style="--ic:linear-gradient(135deg,#0ea5e9,#2563eb);--icg:rgba(14,165,233,.55)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>
+              </div>
+              <div><h3 class="skill-name">MySQL</h3><p class="skill-sub">Relational data and queries</p></div>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-bar"><span class="skill-fill" data-level="80" style="--lvl:80%"></span></div>
+              <span class="skill-num">80%</span>
+            </div>
+            <ul class="chips"><li>Queries</li><li>Joins</li><li>Schema design</li></ul>
+          </article>
+
+          <article class="skill-card glass glow-border tilt">
+            <div class="skill-top">
+              <div class="skill-ico" style="--ic:linear-gradient(135deg,#3b82f6,#eab308);--icg:rgba(59,130,246,.5)">Py</div>
+              <div><h3 class="skill-name">Python</h3><p class="skill-sub">Basic: scripting and automation</p></div>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-bar"><span class="skill-fill" data-level="50" style="--lvl:50%"></span></div>
+              <span class="skill-num" data-label="Basic">Basic</span>
+            </div>
+            <ul class="chips"><li>Syntax</li><li>Scripting</li></ul>
+          </article>
+
+          <article class="skill-card glass glow-border tilt">
+            <div class="skill-top">
+              <div class="skill-ico" style="--ic:linear-gradient(135deg,#8b5cf6,#ff3fa4);--icg:rgba(139,92,246,.6)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2.5v3M15 2.5v3M9 18.5v3M15 18.5v3M2.5 9h3M2.5 15h3M18.5 9h3M18.5 15h3"/></svg>
+              </div>
+              <div><h3 class="skill-name">Computer science core</h3><p class="skill-sub">Fundamentals, systems, architecture</p></div>
+            </div>
+            <div class="skill-meter">
+              <div class="skill-bar"><span class="skill-fill" data-level="88" style="--lvl:88%"></span></div>
+              <span class="skill-num">88%</span>
+            </div>
+            <ul class="chips"><li>Computer fundamentals</li><li>System knowledge</li><li>Architecture</li></ul>
+          </article>
+
+        </div>
+
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee-track">
+            <div class="mq-set"><span>Java</span><span>JavaScript</span><span>Android SDK</span><span>MySQL</span><span>Python</span><span>Software architecture</span><span>System knowledge</span><span>Computer fundamentals</span></div>
+            <div class="mq-set"><span>Java</span><span>JavaScript</span><span>Android SDK</span><span>MySQL</span><span>Python</span><span>Software architecture</span><span>System knowledge</span><span>Computer fundamentals</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="kicker">Projects</p>
+          <h2 class="title">Selected work</h2>
+          <p class="subtitle">Replace these sample projects with your own: titles, descriptions, tags and links.</p>
+        </div>
+
+        <div class="filter glass" role="group" aria-label="Filter projects" data-reveal>
+          <button type="button" class="active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-filter="android" aria-pressed="false">Android</button>
+          <button type="button" data-filter="web" aria-pressed="false">Web</button>
+        </div>
+
+        <div class="projects-grid" data-stagger>
+
+          <!-- ===== PROJECT CARD TEMPLATE (copy / edit) ===== -->
+          <article class="project glass glow-border tilt" data-cat="android" data-tilt="9">
+            <div class="thumb" style="--g:linear-gradient(135deg,#0ea5e9,#6366f1 60%,#a855f7)">
+              <div class="mock phone"><i></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="p-body">
+              <span class="p-type">Android app</span>
+              <h3 class="p-title">NoteNest</h3>
+              <p class="p-desc">An offline-first notes app with search, categories and a clean Material interface.</p>
+              <ul class="chips"><li>Java</li><li>Android SDK</li><li>SQLite</li></ul>
+              <div class="p-links">
+                <a class="btn btn-primary btn-sm" href="#" target="_blank" rel="noopener">Live preview</a>
+                <a class="btn btn-ghost btn-sm" href="#" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project glass glow-border tilt" data-cat="web" data-tilt="9">
+            <div class="thumb" style="--g:linear-gradient(135deg,#ec4899,#8b5cf6 60%,#3b82f6)">
+              <div class="mock browser"><i></i><i></i><i></i></div>
+            </div>
+            <div class="p-body">
+              <span class="p-type web">Web app</span>
+              <h3 class="p-title">StockPilot</h3>
+              <p class="p-desc">An inventory dashboard that tracks stock levels, suppliers and orders in a MySQL database.</p>
+              <ul class="chips"><li>JavaScript</li><li>MySQL</li><li>REST</li></ul>
+              <div class="p-links">
+                <a class="btn btn-primary btn-sm" href="#" target="_blank" rel="noopener">Live preview</a>
+                <a class="btn btn-ghost btn-sm" href="#" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project glass glow-border tilt" data-cat="android" data-tilt="9">
+            <div class="thumb" style="--g:linear-gradient(135deg,#10b981,#06b6d4 60%,#3b82f6)">
+              <div class="mock phone"><i></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="p-body">
+              <span class="p-type">Android app</span>
+              <h3 class="p-title">BudgetBee</h3>
+              <p class="p-desc">A personal expense tracker with monthly summaries and spending categories.</p>
+              <ul class="chips"><li>Java</li><li>Room</li><li>Material</li></ul>
+              <div class="p-links">
+                <a class="btn btn-primary btn-sm" href="#" target="_blank" rel="noopener">Live preview</a>
+                <a class="btn btn-ghost btn-sm" href="#" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project glass glow-border tilt" data-cat="web" data-tilt="9">
+            <div class="thumb" style="--g:linear-gradient(135deg,#f97316,#ef4444 55%,#ec4899)">
+              <div class="mock browser"><i></i><i></i><i></i></div>
+            </div>
+            <div class="p-body">
+              <span class="p-type web">Web app</span>
+              <h3 class="p-title">TaskFlow</h3>
+              <p class="p-desc">A drag-and-drop kanban board for planning work, built with vanilla JavaScript.</p>
+              <ul class="chips"><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
+              <div class="p-links">
+                <a class="btn btn-primary btn-sm" href="#" target="_blank" rel="noopener">Live preview</a>
+                <a class="btn btn-ghost btn-sm" href="#" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project glass glow-border tilt" data-cat="android" data-tilt="9">
+            <div class="thumb" style="--g:linear-gradient(135deg,#a855f7,#ec4899 60%,#f97316)">
+              <div class="mock phone"><i></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="p-body">
+              <span class="p-type">Android app</span>
+              <h3 class="p-title">ShopLite</h3>
+              <p class="p-desc">A lightweight shopping client with product lists, a cart and order history.</p>
+              <ul class="chips"><li>Java</li><li>REST</li><li>RecyclerView</li></ul>
+              <div class="p-links">
+                <a class="btn btn-primary btn-sm" href="#" target="_blank" rel="noopener">Live preview</a>
+                <a class="btn btn-ghost btn-sm" href="#" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project glass glow-border tilt" data-cat="web" data-tilt="9">
+            <div class="thumb" style="--g:linear-gradient(135deg,#14b8a6,#22d3ee 55%,#6366f1)">
+              <div class="mock browser"><i></i><i></i><i></i></div>
+            </div>
+            <div class="p-body">
+              <span class="p-type web">Web app</span>
+              <h3 class="p-title">QuizArena</h3>
+              <p class="p-desc">A timed quiz platform with score tracking and a leaderboard backed by MySQL.</p>
+              <ul class="chips"><li>JavaScript</li><li>MySQL</li><li>Java</li></ul>
+              <div class="p-links">
+                <a class="btn btn-primary btn-sm" href="#" target="_blank" rel="noopener">Live preview</a>
+                <a class="btn btn-ghost btn-sm" href="#" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+
+          <div class="contact-info">
+            <div class="section-head" data-reveal>
+              <p class="kicker">Contact</p>
+              <h2 class="title">Let's build something together</h2>
+              <p class="subtitle">Have a project, a role or a question? Send a message and I'll reply as soon as I can.</p>
+            </div>
+
+            <a class="mail-link" href="mailto:you@example.com" data-reveal>umairyasin911410@gmail.com</a>
+
+            <div class="socials" data-reveal>
+              <a class="social" href="https://github.com/your-username" target="_blank" rel="noopener" aria-label="GitHub" data-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+              </a>
+              <a class="social" href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener" aria-label="LinkedIn" data-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 9h3v11H4zM5.5 4a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6zM10 9h2.9v1.6c.5-.9 1.6-1.8 3.3-1.8 3.2 0 3.8 2.1 3.8 4.8V20h-3v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V20h-3z"/></svg>
+              </a>
+              <a class="social" href="umairyasin911410@gmail.com" aria-label="Email" data-label="Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>
+              </a>
+              <a class="social" href="Resume.html" target="_blank" rel="noopener" aria-label="Resume" data-label="Resume">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form glass glow-border" id="contact-form" novalidate data-reveal>
+            <div class="form-row">
+              <div class="field">
+                <input type="text" id="f-name" name="name" placeholder=" " autocomplete="name" required />
+                <label for="f-name">Your Name</label>
+                <span class="field-line"></span>
+                <span class="err" role="alert"></span>
+              </div>
+              <div class="field">
+                <input type="email" id="f-email" name="email" placeholder=" " autocomplete="email" required />
+                <label for="f-email">Email address</label>
+                <span class="field-line"></span>
+                <span class="err" role="alert"></span>
+              </div>
+            </div>
+
+            <div class="field">
+              <textarea id="f-message" name="message" rows="5" placeholder=" " required></textarea>
+              <label for="f-message">Your message</label>
+              <span class="field-line"></span>
+              <span class="err" role="alert"></span>
+            </div>
+
+            <!-- Honeypot: bots fill this in, people never see it -->
+            <div class="hp" aria-hidden="true"><label>Company <input type="text" name="company" tabindex="-1" autocomplete="off" /></label></div>
+
+            <button class="btn btn-primary" type="submit" data-magnetic>
+              <span class="btn-label">Send message</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              <span class="spinner"></span>
+            </button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Umair Yasin. Built with Three.js and GSAP.</p>
+      <a href="#home" class="to-top">Back to top</a>
+    </div>
+  </footer>
+
+  <!-- Libraries (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- App scripts -->
+  <script src="js/scene.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

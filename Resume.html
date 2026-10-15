@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Umair Yasin — Software Engineer | Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #0a0e1a;
+    --bg-2: #0f1524;
+    --surface: rgba(255,255,255,0.05);
+    --surface-2: rgba(255,255,255,0.09);
+    --border: rgba(255,255,255,0.08);
+    --border-strong: rgba(255,255,255,0.14);
+    --text: #f1f4fa;
+    --text-dim: #8892a8;
+    --text-faint: #4a5468;
+
+    --accent-1: #5eead4;
+    --accent-2: #818cf8;
+    --accent-3: #fbbf24;
+    --accent-4: #34d399;
+
+    --grad: linear-gradient(135deg, #5eead4 0%, #818cf8 50%, #c084fc 100%);
+    --grad-text: linear-gradient(135deg, #5eead4 0%, #818cf8 60%, #c084fc 100%);
+
+    --radius: 14px;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  html {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+    padding: 40px 20px;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 50% at 20% 0%, rgba(94,234,212,0.10), transparent 60%),
+      radial-gradient(ellipse 70% 50% at 80% 100%, rgba(129,140,248,0.10), transparent 60%),
+      radial-gradient(ellipse 50% 40% at 50% 50%, rgba(192,132,252,0.05), transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+    animation: bgShift 15s ease-in-out infinite alternate;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' /%3E%3C/svg%3E");
+  }
+
+  @keyframes bgShift {
+    0%   { background-position: 0% 0%, 100% 100%, 50% 50%; }
+    100% { background-position: 20% 10%, 80% 90%, 40% 60%; }
+  }
+
+  .page {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 48px 52px;
+    background: linear-gradient(180deg, rgba(15,21,36,0.92) 0%, rgba(10,14,26,0.92) 100%);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow:
+      0 1px 0 0 rgba(255,255,255,0.05) inset,
+      0 30px 80px -40px rgba(94,234,212,0.2),
+      0 20px 60px -30px rgba(129,140,248,0.15);
+    opacity: 0;
+    transform: translateY(30px) scale(0.99);
+    animation: pageIn 0.9s var(--ease) 0.1s forwards;
+  }
+
+  @keyframes pageIn {
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  .page::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 10%; right: 10%;
+    height: 2px;
+    border-radius: 0 0 4px 4px;
+    background: var(--grad);
+    background-size: 200% 100%;
+    opacity: 0.75;
+    animation: gradShift 5s linear infinite;
+  }
+
+  @keyframes gradShift {
+    0%   { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+  }
+
+  .header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: center;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 34px;
+  }
+
+  .name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 1.05;
+    background: var(--grad-text);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradShiftText 8s ease infinite;
+    filter: drop-shadow(0 2px 20px rgba(94,234,212,0.15));
+  }
+
+  @keyframes gradShiftText {
+    0%, 100% { background-position: 0% 50%; }
+    50%      { background-position: 100% 50%; }
+  }
+
+  .title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.95rem;
+    color: var(--accent-1);
+    margin-top: 6px;
+    letter-spacing: 0.02em;
+  }
+
+  .tagline {
+    font-size: 0.88rem;
+    color: var(--text-dim);
+    margin-top: 10px;
+    max-width: 480px;
+    line-height: 1.5;
+    min-height: 2.6em;
+  }
+
+  .tagline .cursor {
+    display: inline-block;
+    width: 8px;
+    height: 1em;
+    background: var(--accent-1);
+    vertical-align: text-bottom;
+    margin-left: 2px;
+    animation: blink 0.9s steps(1) infinite;
+  }
+
+  @keyframes blink {
+    0%, 50%   { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin-top: 14px;
+    font-size: 0.82rem;
+    color: var(--text-dim);
+    opacity: 0;
+    animation: fadeUp 0.8s var(--ease) 0.9s forwards;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .contact-row a {
+    position: relative;
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .contact-row a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent-1);
+    transition: width 0.3s var(--ease);
+  }
+
+  .contact-row a:hover { color: var(--accent-1); }
+  .contact-row a:hover::after { width: 100%; }
+
+  .contact-row span::before {
+    content: '•';
+    color: var(--accent-2);
+    margin-right: 8px;
+    font-weight: 700;
+  }
+
+  .contact-row span:first-child::before { display: none; }
+
+  .photo {
+    position: relative;
+    flex-shrink: 0;
+    width: 165px;
+    height: 165px;
+    padding: 3px;
+    border-radius: 50%;
+    background: conic-gradient(from 180deg, #5eead4, #818cf8, #c084fc, #5eead4);
+    box-shadow:
+      0 0 0 1px rgba(255,255,255,0.06),
+      0 10px 40px -12px rgba(94,234,212,0.5),
+      0 4px 20px -8px rgba(129,140,248,0.4);
+    animation: floatPhoto 5s ease-in-out infinite;
+    transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+  }
+
+  .photo::before {
+    content: '';
+    position: absolute;
+    inset: -18px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(94,234,212,0.3), rgba(129,140,248,0.2), transparent 70%);
+    filter: blur(20px);
+    z-index: -1;
+    animation: glowPulse 4s ease-in-out infinite;
+  }
+
+  .photo:hover {
+    transform: scale(1.05);
+    box-shadow:
+      0 0 0 1px rgba(255,255,255,0.12),
+      0 18px 50px -12px rgba(94,234,212,0.7),
+      0 8px 30px -8px rgba(192,132,252,0.5);
+  }
+
+  @keyframes floatPhoto {
+    0%, 100% { margin-top: 0; }
+    50%      { margin-top: -8px; }
+  }
+
+  @keyframes glowPulse {
+    0%, 100% { opacity: 0.55; transform: scale(1); }
+    50%      { opacity: 0.95; transform: scale(1.06); }
+  }
+
+  .photo-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+    background: #0a0e1a;
+    color: var(--accent-1);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 2.6rem;
+    font-weight: 700;
+  }
+
+  .photo-inner img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .section {
+    margin-bottom: 28px;
+    opacity: 0;
+    transform: translateY(24px);
+    animation: sectionIn 0.8s var(--ease) forwards;
+  }
+
+  .section:nth-of-type(1) { animation-delay: 0.35s; }
+  .section:nth-of-type(2) { animation-delay: 0.45s; }
+  .section:nth-of-type(3) { animation-delay: 0.55s; }
+  .section:nth-of-type(4) { animation-delay: 0.65s; }
+  .section:nth-of-type(5) { animation-delay: 0.75s; }
+  .section:nth-of-type(6) { animation-delay: 0.85s; }
+  .section:nth-of-type(7) { animation-delay: 0.95s; }
+
+  @keyframes sectionIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent-1);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--accent-1), transparent);
+    opacity: 0.4;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: lineGrow 0.9s var(--ease) 0.6s forwards;
+  }
+
+  @keyframes lineGrow {
+    to { transform: scaleX(1); }
+  }
+
+  .summary {
+    font-size: 0.92rem;
+    color: var(--text-dim);
+    line-height: 1.65;
+  }
+
+  .summary strong { color: var(--text); font-weight: 600; }
+
+  .edu-item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: all 0.35s var(--ease);
+  }
+
+  .edu-item::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--grad);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.4s var(--ease);
+  }
+
+  .edu-item:hover {
+    background: var(--surface-2);
+    border-color: rgba(94,234,212,0.4);
+    transform: translateX(4px);
+  }
+
+  .edu-item:hover::before { transform: scaleY(1); }
+
+  .edu-item h3 {
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .edu-item .sub {
+    margin-top: 3px;
+    font-size: 0.82rem;
+    color: var(--text-dim);
+  }
+
+  .edu-item .meta {
+    align-self: flex-start;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--accent-1);
+    white-space: nowrap;
+  }
+
+  .edu-item .meta .score {
+    display: block;
+    margin-top: 4px;
+    font-weight: 600;
+    color: var(--accent-3);
+  }
+
+  .cert-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-3);
+    border-radius: var(--radius);
+    transition: all 0.4s var(--ease);
+  }
+
+  .cert-item::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(94,234,212,0.08), transparent);
+    transition: left 0.6s var(--ease);
+  }
+
+  .cert-item:hover {
+    border-left-color: var(--accent-1);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px -12px rgba(251,191,36,0.4);
+  }
+
+  .cert-item:hover::after { left: 100%; }
+
+  .cert-icon {
+    flex-shrink: 0;
+    font-size: 1.6rem;
+    filter: drop-shadow(0 0 10px rgba(251,191,36,0.6));
+  }
+
+  .cert-info h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .cert-info p {
+    margin-top: 2px;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+  }
+
+  .cert-badge {
+    margin-left: auto;
+    padding: 4px 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--accent-4);
+    white-space: nowrap;
+    background: rgba(52,211,153,0.1);
+    border: 1px solid rgba(52,211,153,0.3);
+    border-radius: 999px;
+    animation: badgePulse 2.5s ease-in-out infinite;
+  }
+
+  @keyframes badgePulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(52,211,153,0.4); }
+    50%      { box-shadow: 0 0 0 6px rgba(52,211,153,0); }
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 24px;
+  }
+
+  .skill-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.86rem;
+    transition: transform 0.3s var(--ease);
+  }
+
+  .skill-row:hover { transform: translateX(4px); }
+
+  .skill-row .dot {
+    position: relative;
+    flex-shrink: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent-1);
+    box-shadow: 0 0 8px var(--accent-1);
+  }
+
+  .skill-row .dot::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border: 1px solid var(--accent-1);
+    border-radius: 50%;
+    opacity: 0;
+    animation: dotPulse 2.4s ease-out infinite;
+  }
+
+  .skill-row:nth-child(2) .dot::after { animation-delay: 0.3s; }
+  .skill-row:nth-child(3) .dot::after { animation-delay: 0.6s; }
+  .skill-row:nth-child(4) .dot::after { animation-delay: 0.9s; }
+  .skill-row:nth-child(5) .dot::after { animation-delay: 1.2s; }
+  .skill-row:nth-child(6) .dot::after { animation-delay: 1.5s; }
+
+  @keyframes dotPulse {
+    0%   { opacity: 0.8; transform: scale(0.8); }
+    100% { opacity: 0;   transform: scale(2.2); }
+  }
+
+  .skill-row .label { min-width: 90px; color: var(--text-dim); }
+  .skill-row .value { color: var(--text); font-weight: 500; }
+
+  .project {
+    position: relative;
+    padding: 16px 18px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-1);
+    border-radius: var(--radius);
+    transition: all 0.4s var(--ease);
+  }
+
+  .project::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(94,234,212,0.08), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+
+  .project:hover {
+    border-left-color: var(--accent-2);
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px -20px rgba(129,140,248,0.5);
+  }
+
+  .project:hover::before { opacity: 1; }
+
+  .project-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 4px;
+  }
+
+  .project h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    transition: color 0.3s;
+  }
+
+  .project:hover h3 { color: var(--accent-1); }
+
+  .project .stack {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--accent-2);
+    white-space: nowrap;
+  }
+
+  .project p {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    line-height: 1.55;
+  }
+
+  .project ul {
+    margin-top: 8px;
+    padding-left: 16px;
+  }
+
+  .project li {
+    margin-bottom: 3px;
+    font-size: 0.84rem;
+    color: var(--text-dim);
+    line-height: 1.6;
+    transition: color 0.3s, transform 0.3s;
+  }
+
+  .project li:hover {
+    color: var(--text);
+    transform: translateX(3px);
+  }
+
+  .project li::marker { color: var(--accent-1); }
+
+  .inline-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .chip {
+    padding: 5px 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.74rem;
+    color: var(--text-dim);
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    transition: all 0.35s var(--ease);
+  }
+
+  .chip:hover {
+    color: var(--accent-1);
+    border-color: rgba(94,234,212,0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px -6px rgba(94,234,212,0.5);
+  }
+
+  .footer {
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--text-faint);
+    letter-spacing: 0.08em;
+  }
+
+  .footer .heart {
+    display: inline-block;
+    color: var(--accent-3);
+    animation: heartbeat 1.5s ease-in-out infinite;
+  }
+
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    25%      { transform: scale(1.25); }
+    50%      { transform: scale(1); }
+  }
+
+  .print-btn {
+    position: fixed;
+    bottom: 24px; right: 24px;
+    z-index: 100;
+    padding: 14px 28px;
+    font-family: inherit;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #0a0e1a;
+    cursor: pointer;
+    background: var(--grad);
+    background-size: 200% 200%;
+    border: none;
+    border-radius: 999px;
+    box-shadow:
+      0 12px 30px -8px rgba(94,234,212,0.6),
+      0 4px 15px -5px rgba(129,140,248,0.5);
+    transition: all 0.4s var(--ease);
+    animation: gradShiftText 8s ease infinite, floatBtn 3s ease-in-out infinite;
+  }
+
+  .print-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow:
+      0 18px 45px -8px rgba(94,234,212,0.8),
+      0 6px 20px -5px rgba(192,132,252,0.6);
+  }
+
+  @keyframes floatBtn {
+    0%, 100% { bottom: 24px; }
+    50%      { bottom: 30px; }
+  }
+
+  @media print {
+    * { animation: none !important; transition: none !important; }
+    body { background: #fff; color: #141111; padding: 0; }
+    body::before, body::after { display: none; }
+
+    .page {
+      max-width: 100%;
+      padding: 28px 32px;
+      background: #fff;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    .page::before { display: none; }
+
+    .name {
+      background: none;
+      -webkit-text-fill-color: #111;
+      color: #111;
+      filter: none;
+    }
+
+    .title,
+    .section-title,
+    .project .stack,
+    .edu-item .meta,
+    .edu-item .meta .score {
+      -webkit-text-fill-color: #0066cc !important;
+      color: #0066cc !important;
+    }
+
+    .section-title::after {
+      background: linear-gradient(90deg, #0066cc, transparent);
+      transform: scaleX(1) !important;
+    }
+
+    .tagline,
+    .summary,
+    .project p,
+    .project li,
+    .skill-row .label,
+    .skill-row .value,
+    .contact-row,
+    .contact-row a,
+    .edu-item .sub,
+    .cert-info h3,
+    .cert-info p {
+      color: #333 !important;
+      -webkit-text-fill-color: #333 !important;
+    }
+
+    .edu-item,
+    .project,
+    .chip,
+    .cert-item {
+      background: #f7f8fa !important;
+      border-color: #ddd !important;
+    }
+
+    .project { border-left-color: #0066cc !important; }
+    .cert-item { border-left-color: #c2185b !important; }
+
+    .skill-row .dot {
+      background: #0066cc !important;
+      box-shadow: none !important;
+    }
+
+    .skill-row .dot::after { display: none; }
+
+    .photo {
+      background: #0066cc !important;
+      padding: 0;
+      box-shadow: none !important;
+      animation: none !important;
+    }
+
+    .photo::before { display: none; }
+
+    .photo-inner {
+      color: #fff;
+      background: #0066cc;
+      font-size: 2.2rem;
+    }
+
+    .cert-badge {
+      background: #e8f5e9 !important;
+      color: #2e7d32 !important;
+      border-color: #a5d6a7 !important;
+    }
+
+    .footer {
+      color: #888 !important;
+      border-color: #ddd !important;
+    }
+
+    .print-btn { display: none !important; }
+    .section { opacity: 1 !important; transform: none !important; }
+    .contact-row { opacity: 1 !important; }
+  }
+
+  @media (max-width: 700px) {
+    .page { padding: 30px 22px; }
+
+    .header {
+      grid-template-columns: 1fr;
+      gap: 24px;
+      text-align: center;
+    }
+
+    .photo {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto;
+    }
+
+    .photo-inner { font-size: 2.2rem; }
+    .contact-row { justify-content: center; }
+
+    .tagline {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .skills-grid { grid-template-columns: 1fr; }
+    .name { font-size: 2rem; }
+
+    .project-head {
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .cert-item { flex-wrap: wrap; }
+    .cert-badge { margin-left: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">⬇ Save as PDF</button>
+
+<div class="page">
+
+  <header class="header">
+    <div>
+      <h1 class="name">Umair Yasin</h1>
+      <div class="title">Software Engineer · Android Developer</div>
+      <p class="tagline" id="tagline"><span class="cursor"></span></p>
+      <div class="contact-row">
+        <span><a href="mailto:malikumair295410@gmail.com">malikumair295410@gmail.com</a></span>
+        <span>+92 326 433 4885</span>
+        <span>Lahore, Pakistan</span>
+        <span><a href="https://github.com/Umair-Yasin-dev">github.com/Umair-Yasin-dev</a></span>
+      </div>
+    </div>
+    <div class="photo">
+      <div class="photo-inner">
+        <img src="umairyasin.png" alt="Umair Yasin" />
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <h2 class="section-title">Profile</h2>
+    <p class="summary">
+      Motivated <strong>Software Engineer</strong> and <strong>Android Developer</strong> with a
+      solid foundation in <strong>Java</strong>, <strong>Android SDK</strong>, and
+      <strong>object-oriented programming</strong>. Skilled in building clean, scalable
+      applications with a strong understanding of databases, networking, and modern
+      software architecture. Passionate about writing efficient code, solving real-world
+      problems, and continuously learning new technologies. Seeking an entry-level
+      opportunity to contribute to impactful software projects.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-row"><span class="dot"></span><span class="label">Languages</span><span class="value">Java, JavaScript, Python (Basics), SQL</span></div>
+      <div class="skill-row"><span class="dot"></span><span class="label">Mobile</span><span class="value">Android SDK, Material Design</span></div>
+      <div class="skill-row"><span class="dot"></span><span class="label">Web</span><span class="value">HTML, CSS, JavaScript</span></div>
+      <div class="skill-row"><span class="dot"></span><span class="label">Database</span><span class="value">MySQL, Relational Design</span></div>
+      <div class="skill-row"><span class="dot"></span><span class="label">Core CS</span><span class="value">OOP, DSA, Networks, DBMS</span></div>
+      <div class="skill-row"><span class="dot"></span><span class="label">Architecture</span><span class="value">MVC, MVVM, Clean Code</span></div>
+    </div>
+    <div class="inline-list" style="margin-top:16px;">
+      <span class="chip">Git</span>
+      <span class="chip">GitHub</span>
+      <span class="chip">Android Studio</span>
+      <span class="chip">VS Code</span>
+      <span class="chip">Postman</span>
+      <span class="chip">MySQL Workbench</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="project">
+      <div class="project-head">
+        <h3>School Management System</h3>
+        <span class="stack">Java · Android · MySQL</span>
+      </div>
+      <p>
+        A complete Android application to manage student records, attendance,
+        and academic results — built with a clean architecture and a
+        user-friendly interface for administrators and teachers.
+      </p>
+      <ul>
+        <li>Designed normalized MySQL schema for students, classes, and results.</li>
+        <li>Implemented secure login, CRUD operations, and role-based access.</li>
+        <li>Applied OOP principles and MVVM pattern for maintainable code.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <h3>Real-World Responsive Website</h3>
+        <span class="stack">HTML · CSS · JavaScript</span>
+      </div>
+      <p>
+        A fully responsive, production-style website with modern UI, smooth
+        animations, and clean semantic markup — optimized for performance
+        across desktop and mobile devices.
+      </p>
+      <ul>
+        <li>Built reusable components with mobile-first responsive design.</li>
+        <li>Added interactive UI elements using vanilla JavaScript.</li>
+        <li>Focused on accessibility, clean structure, and fast load times.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Education</h2>
+    <div class="edu-item">
+      <div>
+        <h3>Diploma of Associate Engineering (DAE) — Software Technology</h3>
+        <div class="sub">Government College of Technology (GCT), Printing &amp; Graphics Arts</div>
+        <div class="sub" style="margin-top:6px;">
+          <strong style="color:var(--text-dim);">Relevant Coursework:</strong>
+          Object-Oriented Programming · Database Systems · Computer Networks
+        </div>
+      </div>
+      <div class="meta">
+        Lahore, PK
+        <span class="score">90%+</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Certifications</h2>
+    <div class="cert-item">
+      <div class="cert-icon">🏮</div>
+      <div class="cert-info">
+        <h3>HSK 3 — Chinese Language Proficiency</h3>
+        <p>Hanyu Shuiping Kaoshi Level 3 · Test of Chinese as a Foreign Language</p>
+      </div>
+      <span class="cert-badge">✓ PASSED</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Languages</h2>
+    <div class="skills-grid">
+      <div class="skill-row"><span class="dot"></span><span class="label">Urdu</span><span class="value">Native</span></div>
+      <div class="skill-row"><span class="dot"></span><span class="label">Punjabi</span><span class="value">Native</span></div>
+      <div class="skill-row"><span class="dot"></span><span class="label">English</span><span class="value">Professional</span></div>
+      <div class="skill-row"><span class="dot"></span><span class="label">Chinese</span><span class="value">HSK 3 Certified</span></div>
+    </div>
+  </section>
+
+  <div class="footer">
+    UMAIR YASIN · SOFTWARE ENGINEER · <span class="heart">♥</span> BUILT WITH CODE
+  </div>
+
+</div>
+
+<script>
+  (function () {
+    const el = document.getElementById('tagline');
+    const cursor = el.querySelector('.cursor');
+    const text = "Building performance-driven mobile apps & software architecture with Java, Android SDK, and modern web technologies.";
+    let i = 0;
+    const speed = 22;
+
+    function type() {
+      if (i < text.length) {
+        cursor.insertAdjacentText('beforebegin', text.charAt(i));
+        i++;
+        setTimeout(type, speed);
+      }
+    }
+    setTimeout(type, 500);
+
+    document.querySelectorAll('.project').forEach((card) => {
+      card.addEventListener('mousemove', (e) => {
+        const r = card.getBoundingClientRect();
+        const x = ((e.clientX - r.left) / r.width) * 100;
+        const y = ((e.clientY - r.top) / r.height) * 100;
+        card.style.setProperty('--mx', x + '%');
+        card.style.setProperty('--my', y + '%');
+      });
+    });
+
+    const photo = document.querySelector('.photo');
+    if (photo && window.matchMedia('(pointer: fine)').matches) {
+      window.addEventListener('mousemove', (e) => {
+        const x = (e.clientX / window.innerWidth - 0.5) * 10;
+        const y = (e.clientY / window.innerHeight - 0.5) * 10;
+        photo.style.marginLeft = x + 'px';
+        photo.style.marginTop = y + 'px';
+      });
+    }
+
+    document.querySelectorAll('.skill-row').forEach((row, idx) => {
+      row.style.opacity = '0';
+      row.style.transform = 'translateX(-10px)';
+      setTimeout(() => {
+        row.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        row.style.opacity = '1';
+        row.style.transform = 'translateX(0)';
+      }, 1200 + idx * 80);
+    });
+  })();
+</script>
+
+</body>
+</html>
